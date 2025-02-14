@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.cshtml": "html",
+    "*.cpp": "cpp",
+    "string": "cpp",
+    "climits": "cpp"
+  }
+}
