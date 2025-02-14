@@ -1,11 +1,5 @@
-/*
-Generate a random number of  rows (between 30 and 125)
-
-Each row has 20 random integer values between -50 and 50.
-
-When you write the row to a file, sum the data (last value in the row is the sum of the values in that row)(So that each row actually has 21 values).  
-
-*/
+// Julian Bowen
+// This file combines question 4 part one and two together. This file generates the data as well as reading and outputting the data
 
 #include <iostream>  // Input/output
 #include <fstream>   // File operations
@@ -22,12 +16,13 @@ const int COLS = 20; // fixed number of columns to exclude sum
 
 // Function to generate the data and write it to a file
 void generateData(const string& filename) {
-    srand(time(0));
-    int rowCount = rand() % (125 - 30 + 1) + 30; // Random number of rows between 30 and 125
-    ofstream myfile(filename);
-    if (!myfile.is_open()) {
-        cerr << "Error creating file!" << endl;
-        return;
+  srand(time(0));
+  int rowCount = rand() % (125 - 30 + 1) + 30; // Random number of rows between 30 and 125
+  ofstream myfile(filename);
+  if (!myfile.is_open())
+  {
+    cerr << "Error creating file!" << endl;
+    return;
     }
 
     for (int n = 0; n < rowCount; n++) {
